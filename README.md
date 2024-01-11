@@ -1,10 +1,10 @@
 #Themen
 
-1. [Git & Github Tutorial](git--github-tutorial)
+1. [Git & Github Tutorial](#git--github-tutorial)
 
-# Git & Github Tutorial
+## Git & Github Tutorial
 
-## Begriffe
+# Begriffe
 
 Verzeichnis – Ordner
 Terminal oder Befehlszeile – Schnittstelle für Textbefehle
