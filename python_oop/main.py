@@ -1,11 +1,22 @@
 # Python Magic methods are the methods starting and ending with double underscores ‘__’. They are defined by built-in classes in Python and commonly used for operator overloading.
 
+import csv
+import os
+
+current_directory = os.getcwd()
+
+print("Current Working Directory:", current_directory)
+
 # python .\main.py
 
 # Creating classes
+
+
 class Item:
-    # class attribute
+    # class attributes
     pay_rate = 0.8  # the pay rate after 20% discount
+
+    all = []
 
     # Magic method __init__
     # the contructor awaits certain data types
@@ -24,7 +35,30 @@ class Item:
         self.quantity = quantity
         # working with assert
 
-    # Python allways give the instanse of a method parameter "self". it wil be allways there and is convention do be written
+        # Actions to execute
+        # After an instance being created it appends in the class atribute "all"
+        Item.all.append(self)
+
+    def __repr__(self):
+        return f"Item('{self.name}', {self.price}, {self.quantity})"
+
+    # class method (can only be called from class level)
+    # it needs a declarator
+    @classmethod
+    def instanciate_from_csv(cls):
+        # for some reason the working directory is not where main.py is located
+        with open(r"learning_git\python_oop\items.csv", "r") as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+
+        for item in items:
+            Item(
+                name=item.get('name'),
+                price=float(item.get('price')),
+                quantity=int(item.get('quantity'))
+            )
+
+    # Python allways give the instanse to it owns methods as parameter "self". it wil be allways there and is convention do be written
 
     def calculate_Total_Price(self):
         return self.price * self.quantity
@@ -43,7 +77,7 @@ random_str = str("aaa")
 
 print(f"Total price of the item is {item1.calculate_Total_Price()}")
 
-item2 = Item("Laptop", 100, 5)
+item2 = Item("Laptop", 1000, 2)
 
 print(item2.calculate_Total_Price())
 
@@ -69,3 +103,17 @@ print(item1.price)
 # 2.using class attr on instance lvl (we can change it)
 item2.apply_discount_for_instance()
 print(item2.price)
+
+# initialise another 3 items
+item2 = Item("Cable", 10, 5)
+item3 = Item("Mouse", 50, 5)
+item4 = Item("Keyboard", 75, 5)
+
+print("--printing every object--")
+for instance in Item.all:
+    # after overwriting the __repr__ method we recieve another representation of an instance
+    print(instance)
+
+
+Item.instanciate_from_csv()
+print(Item.all)
