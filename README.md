@@ -1,6 +1,6 @@
 #Themen
 
-1. [Git & Github Tutorial](gitandgithubtutorial)
+1. [Git & Github Tutorial](git--github-tutorial)
 
 # Git & Github Tutorial
 
