@@ -1,4 +1,4 @@
-# Git & Github
+# Git & Github Tutorial
 
 ## Begriffe
 
