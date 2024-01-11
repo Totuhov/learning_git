@@ -44,3 +44,5 @@ pull – Änderungen von einem entfernten Repository auf deinen lokalen Rechner 
 -   Alle Dateien und Verzeichnisse anzeigen, auch versteckte
     ls –la (nicht funktionieren)
     ls –Hidden für VS Code Terminal
+
+- klein Test
