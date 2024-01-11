@@ -45,4 +45,3 @@ pull – Änderungen von einem entfernten Repository auf deinen lokalen Rechner 
     ls –la (nicht funktionieren)
     ls –Hidden für VS Code Terminal
 
-![Git Workflow](images/workflow.png)
