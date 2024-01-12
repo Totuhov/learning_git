@@ -1,11 +1,11 @@
-# Themen
+## Themen
 
 1. [Git & Github Tutorial](#git--github-tutorial)
 2. [Python OOP](#python-oop)
 
-## Git & Github Tutorial
+# Git & Github Tutorial
 
-# Begriffe
+### Begriffe
 
 -   Verzeichnis – Ordner
 -   Terminal oder Befehlszeile – Schnittstelle für Textbefehle
@@ -16,7 +16,7 @@
 -   Git – Tool, das die Änderungen am Code im Laufe der Zeit verfolgt
 -   Github – Eine Website zum Online-Hosten Ihrer Repositories
 
-# Git Befehle
+### Git Befehle
 
 -   **_clone_** – Ein Repository, das irgendwo gehostet wird, wie zum Beispiel auf Github, in einen Ordner auf deinem lokalen Rechner kopieren.
 -   **_add_** – Deine Dateien und Änderungen in Git verfolgen.
@@ -24,7 +24,7 @@
 -   **_push_** – Git-Commits auf ein entferntes Repository hochladen, wie zum Beispiel auf Github, Gitlab, etc.
 -   **_pull_** – Änderungen von einem entfernten Repository auf deinen lokalen Rechner herunterladen, das Gegenteil von push.
 
-## Install Git on Linux - Debian / Ubuntu (apt-get)
+### Install Git on Linux - Debian / Ubuntu (apt-get)
 
 1. Install LINUX on WSL
 
@@ -51,7 +51,7 @@ git --version
 git version 2.9.2
 ```
 
-## Neues Repository erstellen
+### Neues Repository erstellen
 
 -   In github eine neue repo erstellen
 -   SSH Schlüssel in github.com erstellen
