@@ -1,0 +1,11 @@
+# 1. Kapselung
+     - Beschränkung des direkten Zugriffs auf einige Attribute im Programm
+     - Die Validierung der Werte ist Teil dieses Prinzips
+# 2. Abstraktion
+     - Zeigt nur notwendige Attribute an (nicht nur) und blendet unnötige Informationen aus
+     - Wenn wir 20 Klassenmethoden haben, die nur irgendwo in einer anderen Methode verwendet werden, müssen wir dieser Methode keinen Zugriff außerhalb der Klasse gewähren
+     - In Python gibt es keine Modifikatoren wie private, öffentliche usw. Dies kann erreicht werden, indem die beiden _ (für privat) vor dem Namen der Methode hinzugefügt werden
+# 3. Vererbung
+     – Mechanismus, der es uns ermöglicht, den Code rund um unsere Klassen wiederzuverwenden
+# 4. Polymorphie
+    - Das ist ein Konzept in der objektorientierten Programmierung, das ermöglicht, dass ein Bezeichner abhängig von seiner Verwendung Objekte unterschiedlichen Datentyps annimmt.
