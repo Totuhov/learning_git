@@ -7,37 +7,49 @@
 
 # Begriffe
 
-Verzeichnis – Ordner
-Terminal oder Befehlszeile – Schnittstelle für Textbefehle
-CLI – Befehlszeilenschnittstelle
-cd – Verzeichnis wechseln
-Code-Editor – Textverarbeitungsprogramm zum Schreiben von Code
-Repository – Projekt oder der Ordner/Ort, in dem Ihr Projekt gespeichert ist
-Git – Tool, das die Änderungen am Code im Laufe der Zeit verfolgt
-Github – Eine Website zum Online-Hosten Ihrer Repositories
+-   Verzeichnis – Ordner
+-   Terminal oder Befehlszeile – Schnittstelle für Textbefehle
+-   CLI – Befehlszeilenschnittstelle
+-   cd – Verzeichnis wechseln
+-   Code-Editor – Textverarbeitungsprogramm zum Schreiben von Code
+-   Repository – Projekt oder der Ordner/Ort, in dem Ihr Projekt gespeichert ist
+-   Git – Tool, das die Änderungen am Code im Laufe der Zeit verfolgt
+-   Github – Eine Website zum Online-Hosten Ihrer Repositories
 
-## Git Befehle
+# Git Befehle
 
-clone – Ein Repository, das irgendwo gehostet wird, wie zum Beispiel auf Github, in einen Ordner auf deinem lokalen Rechner kopieren.
-add – Deine Dateien und Änderungen in Git verfolgen.
-commit – Deine Dateien in Git speichern.
-push – Git-Commits auf ein entferntes Repository hochladen, wie zum Beispiel auf Github, Gitlab, etc.
-pull – Änderungen von einem entfernten Repository auf deinen lokalen Rechner herunterladen, das Gegenteil von push.
+-   **_clone_** – Ein Repository, das irgendwo gehostet wird, wie zum Beispiel auf Github, in einen Ordner auf deinem lokalen Rechner kopieren.
+-   **_add_** – Deine Dateien und Änderungen in Git verfolgen.
+-   **_commit_** – Deine Dateien in Git speichern.
+-   **_push_** – Git-Commits auf ein entferntes Repository hochladen, wie zum Beispiel auf Github, Gitlab, etc.
+-   **_pull_** – Änderungen von einem entfernten Repository auf deinen lokalen Rechner herunterladen, das Gegenteil von push.
 
 ## Install Git on Linux - Debian / Ubuntu (apt-get)
 
--   Install LINUX on WSL
-    windows command line öffnen:
-    wsl –list –online
-    wsl –install –d <Distro name>
-    oder von Microsoft Store Debian herunterladen
+1. Install LINUX on WSL
 
--   Installieren Sie Git von Ihrer Shell aus mit apt-get:
-    sudo apt-get update
-    sudo apt-get install git
+-   windows command line öffnen:
+
+```sh
+wsl –list –online</code>
+wsl –install –d <Distro name>
+```
+
+2. Oder von Microsoft Store Debian herunterladen **_Empfohlen_**
+
+-   Installieren Sie Git von Ihrer Shell aus mit apt-get
+
+```sh
+sudo apt-get update
+sudo apt-get install git
+```
+
 -   Überprüfen Sie durch Eingabe, ob die Installation erfolgreich war
-    git --version
-    git version 2.9.2
+
+```sh
+git --version
+git version 2.9.2
+```
 
 ## Neues Repository erstellen
 
@@ -47,8 +59,8 @@ pull – Änderungen von einem entfernten Repository auf deinen lokalen Rechner 
     git clone git@github.com:Totuhov/learning_git.git
     cd learning_git
 -   Alle Dateien und Verzeichnisse anzeigen, auch versteckte
-    ls –la (nicht funktionieren)
-    ls –Hidden für VS Code Terminal
+    ls -la (nicht funktionieren)
+    ls -Hidden für VS Code Terminal
 -   git status
 -   Wenn wir ein neues datei erstellen, es is nicht verfolgt von git
     git add <datei- oder verzeichnisname>
@@ -128,6 +140,5 @@ git reset --hard Alle commits sind gelöscht
     git push origin master
 -   Pull Request erstellen: Auf der Plattform (z.B., GitHub) navigierst du zu deinem geforkten Repository und erstellst einen "Pull Request". Dies ist eine Anfrage an den Besitzer des Original-Repositories, deine Änderungen in sein Repository zu übernehmen.
     Änderungen übernehmen: Der Besitzer des Original-Repositories kann deine Änderungen überprüfen und entscheiden, ob er sie in sein Repository übernehmen möchte.
-
 
 ## Python OOP
