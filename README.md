@@ -1,9 +1,12 @@
-## Themen
-
-1. [Git & Github Tutorial](#git--github-tutorial)
-2. [Python OOP](#python-oop)
-
 # Git & Github Tutorial
+
+#### Themen
+
+1. [Begriffe](#begriffe)
+2. [Befehle](#befehle)
+3. [Install Git on Linux](#install-git-on-linux)
+4. [Neues Repository erstellen](#neues-repository-erstellen)
+5. [Git Branching](#git-branching)
 
 ### Begriffe
 
@@ -56,75 +59,125 @@ git version 2.9.2
 -   In github eine neue repo erstellen
 -   SSH Schlüssel in github.com erstellen
 -   In VS Code Terminal öffnen in einem freiausgewählte datei wo das Repo dupliciert werden soll
-    git clone git@github.com:Totuhov/learning_git.git
-    cd learning_git
+
+```sh
+git clone git@github.com:Totuhov/learning_git.git
+cd learning_git
+```
+
 -   Alle Dateien und Verzeichnisse anzeigen, auch versteckte
-    ls -la (nicht funktionieren)
-    ls -Hidden für VS Code Terminal
--   git status
+
+```sh
+ls -la
+ls -Hidden
+```
+
+```sh
+git status
+```
+
 -   Wenn wir ein neues datei erstellen, es is nicht verfolgt von git
+
+```sh
     git add <datei- oder verzeichnisname>
     git add . für alles
+```
+
 -   COMMIT und PUSH
-    git commit –m “comment“ [-m ”description”]
-    git push [origin] [master]
 
-![GitHub Logo](images/workflow.png)
+```sh
+git commit –m “comment“ [-m ”description”]
+git push [origin] [master]
+```
 
-5. Git Branching (Verzweigung)
+## Git Branching (Verzweigung)
 
-![GitHub Logo](images/branches.png)
-
+```sh
 git branch
+* main
+```
 
--   main
+### Branch erstellen
 
-## Branch erstellen
-
-git checkout –b <newBranchName>
-
--   newBranchName
+```sh
+    git checkout –b <newBranchName>
+    * <newBranchName>
     main
+```
 
-*   Wechseln zwishen Zweige
+-   Wechseln zwishen Zweige
+
+```sh
     git checkout main
     git checkout newBranchName
-*   Save changes to the new branch
+```
+
+-   Save changes to the new branch
+
+```sh
     git add . or git add [filename]
     git commit –m “Comment”
-*   Uterschiede prüfen
-    git diff newBranchName in the main branche
-*   Merge lokal
-    git merge newBranchName in the main branche (not so common)
+```
 
+-   Uterschiede prüfen in the main branche
+
+```sh
+    git diff newBranchName
+```
+
+-   Merge lokal in the main branche (not so common)
+
+```sh
+    git merge newBranchName
+```
+
+```sh
     git push
     fatal: The current branch feature-readme-instructions has no upstream branch.
     To push the current branch and set the remote as upstream, use
+```
 
-*   Push in github
+-   Push in github
+
+```sh
     git push –-set-upstream origin newBranchName or
     git push –u origin newBranchName
-*   Erstelle Pull Request
+```
+
+-   Erstelle Pull Request
+
 *   In github (Compare and pull request)
 *   Lokal
+
+```sh
     git checkout main
     git merge feature-readme-instructions
     git push origin main
-*   Branch löshen
-    git branch –d newBranchName
+```
 
-1 Merge Konflikte
-Wenn ein Zweig ist modifiziert und das „main“ auch, mann Kann nicht wechseln zwischen die Zweige. Erstmal commit main dann kann er die Zweige wechseln. Dann zo zweite Zweig und merge master. Oder erst pull request to main branch von gitgub und dann git merge master. Dann kommt Mergekonflikt die mit der Hilfe von editor speichern wir beide mit commit.
+-   Branch löshen
+
+```sh
+    git branch –d newBranchName
+```
+
+1. Merge Konflikte
+   Wenn ein Zweig ist modifiziert und das „main“ auch, mann Kann nicht wechseln zwischen die Zweige. Erstmal commit main dann kann er die Zweige wechseln. Dann zo zweite Zweig und merge master. Oder erst pull request to main branch von gitgub und dann git merge master. Dann kommt Mergekonflikt die mit der Hilfe von editor speichern wir beide mit commit.
 
 ## Undoing in git
 
+```sh
 git reset nach add
 git reset HEAD nach commit HEAD ist pointer zu dem letzten commit
+```
 
 wenn wir nicht zu den letzten commit gehen mochten sondern zu ein alterer:
+
+```sh
 git log
 git reset <hashOfThecommit> die Änderungen sind da amer nicht commitet mehr
 git reset --hard Alle commits sind gelöscht
+```
 
 ## Forking
 
@@ -135,10 +188,12 @@ git reset --hard Alle commits sind gelöscht
     git clone https://github.com/dein-Benutzername/geforktes-Repository.git
 -   Änderungen vornehmen: Du machst die gewünschten Änderungen in deinem lokalen geklonten Repository.
 -   Commit und Push: Du führst die folgenden Git-Befehle aus, um deine Änderungen zu commiten und auf dein geforktes Repository hochzuladen:
+
+```sh
     git add .
     git commit -m "Beschreibung der durchgeführten Änderungen"
     git push origin master
+```
+
 -   Pull Request erstellen: Auf der Plattform (z.B., GitHub) navigierst du zu deinem geforkten Repository und erstellst einen "Pull Request". Dies ist eine Anfrage an den Besitzer des Original-Repositories, deine Änderungen in sein Repository zu übernehmen.
     Änderungen übernehmen: Der Besitzer des Original-Repositories kann deine Änderungen überprüfen und entscheiden, ob er sie in sein Repository übernehmen möchte.
-
-## Python OOP
