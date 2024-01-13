@@ -34,11 +34,11 @@
 -   windows command line öffnen:
 
 ```sh
-wsl –list –online</code>
-wsl –install –d <Distro name>
+wsl –list –online
+wsl –install –d <Distro_name>
 ```
 
-2. Oder von Microsoft Store Debian herunterladen **_Empfohlen_**
+2. Oder von **[Microsoft Store](https://apps.microsoft.com/detail/9MSVKQC78PK6?hl=en-us&gl=US)** Debian herunterladen **_Empfohlen_**
 
 -   Installieren Sie Git von Ihrer Shell aus mit apt-get
 
