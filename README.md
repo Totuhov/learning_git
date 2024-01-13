@@ -90,7 +90,7 @@ git commit –m “comment“ [-m ”description”]
 git push [origin] [master]
 ```
 
-## Git Branching (Verzweigung)
+## Git Branching
 
 ```sh
 git branch
