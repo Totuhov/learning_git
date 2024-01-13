@@ -31,9 +31,9 @@ In diesem Tutorial stelle ich den Prozess für die Einrichtung und Nutzung von G
 -   **push** – Git-Commits auf ein entferntes Repository hochladen, wie zum Beispiel auf Github, Gitlab, etc.
 -   **pull** – Änderungen von einem entfernten Repository auf deinen lokalen Rechner herunterladen, das Gegenteil von push.
 
-### Install Git on Linux - Debian / Ubuntu (apt-get)
+### Install Git on Linux
 
-1. Install LINUX on WSL
+1. Install LINUX on WSL - Debian / Ubuntu (apt-get)
 
 -   windows command line öffnen:
 
