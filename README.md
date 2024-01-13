@@ -79,8 +79,8 @@ git status
 -   Wenn wir ein neues datei erstellen, es is nicht verfolgt von git
 
 ```sh
-    git add <datei- oder verzeichnisname>
-    git add . für alles
+git add <datei- oder verzeichnisname>
+git add . für alles
 ```
 
 -   COMMIT und PUSH
@@ -100,48 +100,48 @@ git branch
 ### Branch erstellen
 
 ```sh
-    git checkout –b <newBranchName>
-    * <newBranchName>
-    main
+git checkout –b <newBranchName>
+* <newBranchName>
+main
 ```
 
 -   Wechseln zwishen Zweige
 
 ```sh
-    git checkout main
-    git checkout newBranchName
+git checkout main
+git checkout newBranchName
 ```
 
 -   Save changes to the new branch
 
 ```sh
-    git add . or git add [filename]
-    git commit –m “Comment”
+git add . or git add [filename]
+git commit –m “Comment”
 ```
 
 -   Uterschiede prüfen in the main branche
 
 ```sh
-    git diff newBranchName
+git diff newBranchName
 ```
 
 -   Merge lokal in the main branche (not so common)
 
 ```sh
-    git merge newBranchName
+git merge newBranchName
 ```
 
 ```sh
-    git push
-    fatal: The current branch feature-readme-instructions has no upstream branch.
-    To push the current branch and set the remote as upstream, use
+git push
+fatal: The current branch feature-readme-instructions has no upstream branch.
+To push the current branch and set the remote as upstream, use
 ```
 
 -   Push in github
 
 ```sh
-    git push –-set-upstream origin newBranchName or
-    git push –u origin newBranchName
+git push –-set-upstream origin newBranchName or
+git push –u origin newBranchName
 ```
 
 -   Erstelle Pull Request
@@ -150,15 +150,15 @@ git branch
 *   Lokal
 
 ```sh
-    git checkout main
-    git merge feature-readme-instructions
-    git push origin main
+git checkout main
+git merge feature-readme-instructions
+git push origin main
 ```
 
 -   Branch löshen
 
 ```sh
-    git branch –d newBranchName
+git branch –d newBranchName
 ```
 
 1. Merge Konflikte
@@ -190,9 +190,9 @@ git reset --hard Alle commits sind gelöscht
 -   Commit und Push: Du führst die folgenden Git-Befehle aus, um deine Änderungen zu commiten und auf dein geforktes Repository hochzuladen:
 
 ```sh
-    git add .
-    git commit -m "Beschreibung der durchgeführten Änderungen"
-    git push origin master
+git add .
+git commit -m "Beschreibung der durchgeführten Änderungen"
+git push origin master
 ```
 
 -   Pull Request erstellen: Auf der Plattform (z.B., GitHub) navigierst du zu deinem geforkten Repository und erstellst einen "Pull Request". Dies ist eine Anfrage an den Besitzer des Original-Repositories, deine Änderungen in sein Repository zu übernehmen.
