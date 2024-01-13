@@ -1,5 +1,7 @@
 # Git & Github Tutorial
 
+In diesem Tutorial stelle ich den Prozess für die Einrichtung und Nutzung von Git unter Linux vor, insbesondere unter Debian. Natürlich ist es möglich, dies mithilfe verschiedener Werkzeuge und Programme (Web oder Desktop) zu realisieren, wie zum Beispiel Git Bash oder die integrierten Funktionen von Visual Studio (VS) und VS Code
+
 #### Themen
 
 1. [Begriffe](#begriffe)
@@ -7,25 +9,27 @@
 3. [Install Git on Linux](#install-git-on-linux)
 4. [Neues Repository erstellen](#neues-repository-erstellen)
 5. [Git Branching](#git-branching)
+6. [Undoing in git](#undoing-in-git)
+7. [Forking](#forking)
 
 ### Begriffe
 
--   Verzeichnis – Ordner
--   Terminal oder Befehlszeile – Schnittstelle für Textbefehle
--   CLI – Befehlszeilenschnittstelle
--   cd – Verzeichnis wechseln
--   Code-Editor – Textverarbeitungsprogramm zum Schreiben von Code
--   Repository – Projekt oder der Ordner/Ort, in dem Ihr Projekt gespeichert ist
--   Git – Tool, das die Änderungen am Code im Laufe der Zeit verfolgt
--   Github – Eine Website zum Online-Hosten Ihrer Repositories
+-   **Verzeichnis** – Ordner
+-   **Terminal** oder **Befehlszeile** – Schnittstelle für Textbefehle
+-   **CLI** – Befehlszeilenschnittstelle
+-   **cd** – Verzeichnis wechseln
+-   **Code-Editor** – Textverarbeitungsprogramm zum Schreiben von Code
+-   **Repository** – Projekt oder der Ordner/Ort, in dem Ihr Projekt gespeichert ist
+-   **Git** – Tool, das die Änderungen am Code im Laufe der Zeit verfolgt
+-   **Github** – Eine Website zum Online-Hosten Ihrer Repositories
 
 ### Git Befehle
 
--   **_clone_** – Ein Repository, das irgendwo gehostet wird, wie zum Beispiel auf Github, in einen Ordner auf deinem lokalen Rechner kopieren.
--   **_add_** – Deine Dateien und Änderungen in Git verfolgen.
--   **_commit_** – Deine Dateien in Git speichern.
--   **_push_** – Git-Commits auf ein entferntes Repository hochladen, wie zum Beispiel auf Github, Gitlab, etc.
--   **_pull_** – Änderungen von einem entfernten Repository auf deinen lokalen Rechner herunterladen, das Gegenteil von push.
+-   **clone** – Ein Repository, das irgendwo gehostet wird, wie zum Beispiel auf Github, in einen Ordner auf deinem lokalen Rechner kopieren.
+-   **add** – Deine Dateien und Änderungen in Git verfolgen.
+-   **commit** – Deine Dateien in Git speichern.
+-   **push** – Git-Commits auf ein entferntes Repository hochladen, wie zum Beispiel auf Github, Gitlab, etc.
+-   **pull** – Änderungen von einem entfernten Repository auf deinen lokalen Rechner herunterladen, das Gegenteil von push.
 
 ### Install Git on Linux - Debian / Ubuntu (apt-get)
 
@@ -38,7 +42,7 @@ wsl –list –online
 wsl –install –d <Distro_name>
 ```
 
-2. Oder von **[Microsoft Store](https://apps.microsoft.com/detail/9MSVKQC78PK6?hl=en-us&gl=US)** Debian herunterladen **_Empfohlen_**
+2. Oder von **[Microsoft Store](https://apps.microsoft.com/detail/9MSVKQC78PK6?hl=en-us&gl=US)** Debian herunterladen **(Empfohlen)**
 
 -   Installieren Sie Git von Ihrer Shell aus mit apt-get
 
@@ -185,7 +189,11 @@ git reset --hard Alle commits sind gelöscht
 
 -   Repository forken: Du erstellst eine Kopie (Fork) eines Repositories auf einer Plattform wie GitHub. Dies wird normalerweise durch einen "Fork" Button auf der Plattform ermöglicht.
 -   Clone des geforkten Repositories: Du klonst die kopierte Version des Repositories auf deinen lokalen Computer, um Änderungen vorzunehmen:
-    git clone https://github.com/dein-Benutzername/geforktes-Repository.git
+
+```sh
+git clone https://github.com/dein-Benutzername/geforktes-Repository.git
+```
+
 -   Änderungen vornehmen: Du machst die gewünschten Änderungen in deinem lokalen geklonten Repository.
 -   Commit und Push: Du führst die folgenden Git-Befehle aus, um deine Änderungen zu commiten und auf dein geforktes Repository hochzuladen:
 
@@ -196,4 +204,4 @@ git push origin master
 ```
 
 -   Pull Request erstellen: Auf der Plattform (z.B., GitHub) navigierst du zu deinem geforkten Repository und erstellst einen "Pull Request". Dies ist eine Anfrage an den Besitzer des Original-Repositories, deine Änderungen in sein Repository zu übernehmen.
-    Änderungen übernehmen: Der Besitzer des Original-Repositories kann deine Änderungen überprüfen und entscheiden, ob er sie in sein Repository übernehmen möchte.
+-   Änderungen übernehmen: Der Besitzer des Original-Repositories kann deine Änderungen überprüfen und entscheiden, ob er sie in sein Repository übernehmen möchte.
